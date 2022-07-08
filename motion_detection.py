@@ -67,7 +67,7 @@ while success: #When success is true -  this will make the loop iterate until th
         #finding the contours of the thresholded image
         contours,hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
         
-        #iterating through the detected contours and excluding those contours which are completely inside another contour
+       
         for idx,c in enumerate(contours):
             if hierarchy[0][idx][3] ==-1:
                 x,y,w,h = cv2.boundingRect(c)
